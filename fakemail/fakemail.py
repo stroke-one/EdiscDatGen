@@ -73,7 +73,12 @@ class EmailSubject(object):
         subject_len = random.randrange(minlen, maxlen)
         subject_start = random.randrange(0, len(self.word_list)-maxlen)
         subject = " ".join(self.word_list[subject_start:subject_start+subject_len])
-        #print("subject: {0}\nsubstart: {1}\nsublen: {2}".format(subject, subject_start, subject_len))
         subject = subject.strip(string.punctuation+" ")
         subject = subject.capitalize()
         return(subject)
+
+
+class EmailDate(object):
+    def __init__(self):
+        pass
+        return

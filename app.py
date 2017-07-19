@@ -1,5 +1,5 @@
-from Fakemail import EmailAddress
-from Fakemail import EmailSubject
+from fakemail.fakemail import EmailAddress
+from fakemail.fakemail import EmailSubject
 
 e = EmailAddress(15)
 print(e)
