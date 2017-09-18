@@ -7,6 +7,7 @@ e = EmailAddress(15)
 s = EmailSubject(100)
 
 fields = ["FROM", "TO", "SUBJECT"]
+d = DatWriter("test.DAT")
 d.write_headers(fields)
 
 for entry in range(1000):
