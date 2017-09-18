@@ -21,6 +21,13 @@ class EmailAddress(object):
     def __str__(self):
         all_emails = "\n".join(self.emails)
         return(all_emails)
+    
+    def __iter__(self):
+        for email in self.emails:
+            yield(email)
+
+    def sample_emails(self, count):
+        return(random.sample(self.emails, count))
 
     def weighted_choice(self, choices):
         """simple weighted selection from 'dict[k] = v' where v is int"""
@@ -63,6 +70,13 @@ class EmailSubject(object):
 
     def __str__(self):
         return("\n".join(self.subjects))
+
+    def __iter__(self):
+        for subject in self.subjects:
+            yield(subject)
+
+    def sample_subjects(self, count):
+        return(random.sample(self.subjects, count))
 
     def gen_word_list(self):
         brown_ids = brown.fileids()
