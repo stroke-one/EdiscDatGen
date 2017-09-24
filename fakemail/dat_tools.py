@@ -5,7 +5,6 @@ class DatWriter:
         self.dat_quotechar = chr(254)
         self.dat_newline   = chr(174)
         self.fp = open(filepath, "w", encoding='utf-8')
-        
 
     def write_headers(self, headers=[]):
         headers = [self.dat_quotechar + h + self.dat_quotechar for h in headers]
@@ -25,7 +24,7 @@ class DatWriter:
         self.fp = None
         return
 
-    
+
 
     
 
