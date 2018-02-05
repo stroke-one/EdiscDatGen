@@ -10,8 +10,10 @@ tm = time.time()
 e = EmailAddress(15)
 s = EmailSubject(100)
 
+## this should be a dict that indicates the source field name and type
 fields = ["FROM", "TO", "SUBJECT"]
-d = DatWriter("test.DAT")
+
+d = DatWriter("E:/DEV/01_PROJECTS/30_DAT_VIEWER_SAMPLES/test.DAT")
 d.write_headers(fields)
 field_bates = UidGen(prefix="BATES")
 
@@ -26,6 +28,7 @@ for entry in range(1000):
 
 d.close()
 
+print("Total entries created: {0}".format(entry))
 print(time.time() - tm)
     
     

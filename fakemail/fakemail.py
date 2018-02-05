@@ -92,16 +92,12 @@ class EmailSubject(object):
 
         # test for preposition as the last word, it looks weird so remove it
         if pos_tag([subject[-1]])[-1][1] == "IN":
-            print("subject {0}".format(subject))
             subject = subject[:-1]
-            print("subject {0}".format(subject))
-            print("******")
 
         #merge the words into a string, make pretty
         subject = " ".join(subject)
         subject = subject.strip(string.punctuation+" ")
         subject = subject.capitalize()
-
         return(subject)
 
 class EmailDate(object):
